@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { CreateQwizeLink } from './CreateQwizeLink';
+import { Link, NavLink } from 'react-router-dom';
+import { twJoin } from 'tailwind-merge';
 
 export const Header = () => {
   return (
@@ -14,7 +14,18 @@ export const Header = () => {
           Quize
         </Link>
 
-        <CreateQwizeLink />
+        <NavLink
+          to="new-quiz"
+          className={({ isActive }) =>
+            twJoin(
+              `rounded-md border-2 p-2 transition
+               hover:bg-black hover:text-white`,
+              isActive && 'hidden',
+            )
+          }
+        >
+          Create new quiz
+        </NavLink>
       </nav>
     </header>
   );

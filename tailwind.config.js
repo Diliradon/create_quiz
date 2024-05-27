@@ -11,6 +11,7 @@ module.exports = {
       'pink': '#FFDBDB',
       'white': '#FFFFFF',
       'black': '#000000',
+      'artichoke': '#8F9779',
     },
     extend: {},
   },
